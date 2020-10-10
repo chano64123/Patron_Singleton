@@ -15,18 +15,14 @@ namespace Patron_Singleton
 
         private static frm03 frm = null; 
 
-        private frm03()
+        public frm03()
         {
             InitializeComponent();
         }
 
-        public static frm03 openForm() 
+        private void frm03_Load(object sender, EventArgs e)
         {
-            if (frm == null)
-            {
-                frm = new frm03();
-            }
-            return frm;
+
         }
     }
 }

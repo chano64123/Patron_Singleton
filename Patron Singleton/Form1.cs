@@ -42,7 +42,7 @@ namespace Patron_Singleton
 
         private void btnAbrirFrom03_Click(object sender, EventArgs e)
         {
-            _frm03 = frm03.openForm();
+            _frm03 = new frm03();
             _frm03.Show();
         }
 

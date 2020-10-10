@@ -49,6 +49,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frm03";
             this.Text = "frm03";
+            this.Load += new System.EventHandler(this.frm03_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
