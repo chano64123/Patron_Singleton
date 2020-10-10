@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Patron_Singleton.Form1">
+    <Position X="4.5" Y="5.5" Width="1.5" />
+    <AssociationLine Name="_frm03" Type="Patron_Singleton.frm03" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.5" Y="6.668" />
+        <Point X="4.125" Y="6.668" />
+        <Point X="4.125" Y="4.573" />
+        <Point X="3.5" Y="4.573" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_conexion" Type="Patron_Singleton.datos.conexion">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.219" Y="0.19" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAECAAQEACEAAAAIAACAAgACAAAAECAAEAVAAIAABAA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="_frm03" />
+      <Property Name="_frm02" />
+      <Property Name="_conexion" />
+      <Property Name="_variable" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Patron_Singleton.frm02">
+    <Position X="2" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAACAAABAAAACAAAACAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>frm02.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Patron_Singleton.frm03">
+    <Position X="2" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAACAAAACQAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>frm03.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Patron_Singleton.Program" Collapsed="true">
+    <Position X="12.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Patron_Singleton.Properties.Resources" Collapsed="true">
+    <Position X="12.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Patron_Singleton.Properties.Settings" Collapsed="true">
+    <Position X="12" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Patron_Singleton.datos.conexion">
+    <Position X="6.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAIAAAAAAAAAAQAAAAUAICAAAAAAAA=</HashCode>
+      <FileName>conexion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Patron_Singleton.variable">
+    <Position X="7" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAIAAAAAAAAAAAAAAAEAICAAAAAAAA=</HashCode>
+      <FileName>variable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
