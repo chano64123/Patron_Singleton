@@ -18,8 +18,7 @@ namespace Patron_Singleton
         {
             InitializeComponent();
         }
-        public frm03 _frm03 { get; set; }
-        public frm02 _frm02 { get; set; }
+
         internal conexion _conexion { get; set; }
         internal variable _variable { get; set; }
 
@@ -34,12 +33,15 @@ namespace Patron_Singleton
             _conexion = conexion.getInstancia();
             _conexion.desconectar();
         }
+
+        public frm02 _frm02 { get; set; }
         private void btnAbrirFrom02_Click(object sender, EventArgs e)
         {
             _frm02 = frm02.openForm();
             _frm02.Show();
         }
 
+        public frm03 _frm03 { get; set; }
         private void btnAbrirFrom03_Click(object sender, EventArgs e)
         {
             _frm03 = new frm03();

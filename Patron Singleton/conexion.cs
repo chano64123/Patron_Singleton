@@ -10,18 +10,7 @@ namespace Patron_Singleton.datos
 {
     class conexion
     {
-        private int numero1;
         private static conexion conn;
-
-        public int getNumero1()
-        {
-            return numero1;
-        }
-
-        public void setNumero1(int _numero1)
-        {
-            numero1 = _numero1;
-        }
 
         private conexion()
         {

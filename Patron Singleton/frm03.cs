@@ -12,17 +12,9 @@ namespace Patron_Singleton
 {
     public partial class frm03 : Form
     {
-
-        private static frm03 frm = null; 
-
         public frm03()
         {
             InitializeComponent();
-        }
-
-        private void frm03_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
