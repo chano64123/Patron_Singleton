@@ -27,5 +27,10 @@ namespace Patron_Singleton
             }
             return form;
         }
+
+        private void frm02_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            form = null;
+        }
     }
 }
