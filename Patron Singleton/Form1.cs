@@ -19,27 +19,44 @@ namespace Patron_Singleton
             InitializeComponent();
         }
 
-        internal conexion _conexion { get; set; }
+        internal SqlConnection _conexion;
         internal variable _variable { get; set; }
 
         private void btnConectar_Click(object sender, EventArgs e)
         {
-            _conexion = conexion.getInstancia();
-            _conexion.conectar();
+            _conexion = conexion.getConnection();
+            _conexion.Open();
+            if (_conexion.State == ConnectionState.Open)
+            {
+                MessageBox.Show("Conexion a la Base de Datos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("No se pudo conctar a la Base de Datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnDesconectar_Click(object sender, EventArgs e)
         {
-            _conexion = conexion.getInstancia();
-            _conexion.desconectar();
+            _conexion = conexion.getConnection();
+            _conexion.Close();
+            if (_conexion.State == ConnectionState.Closed)
+            {
+                MessageBox.Show("Desconexion de la Base de Datos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("No se pudo desconectar de la Base de Datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public frm02 _frm02 { get; set; }
         private void btnAbrirFrom02_Click(object sender, EventArgs e)
         {
             _frm02 = frm02.openForm();
-            _frm02.Show();
+            _frm02.Show(); 
         }
+    
 
         public frm03 _frm03 { get; set; }
         private void btnAbrirFrom03_Click(object sender, EventArgs e)

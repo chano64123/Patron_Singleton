@@ -5,34 +5,65 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Microsoft.CSharp.RuntimeBinder;
 
 namespace Patron_Singleton.datos
 {
     class conexion
     {
-        private static conexion conn;
+        private static SqlConnection conn;
+        private static String user = "";
+        private static String password = "";
+        private static String servidor = @"localhost"; //(localhost) (host) .;
+        private static String basedatos = "bdJeaNet";
 
         private conexion()
         {
         }
 
-        public static conexion getInstancia()
+        public static SqlConnection getConnection()
         {
-            if (conn == null)
+            try
             {
-                conn = new conexion();
+                if (conn == null)
+                {
+                    conn = new SqlConnection();
+                    conn.ConnectionString = "server=" + servidor + ";" + "database=" + basedatos + ";uid=" + user + ";" + "pwd=" + password + ";integrated security = true";
+                }
+                return conn;
             }
-            return conn;
+            catch (SqlException e)
+            {
+                throw new RuntimeBinderException("Conexion fallida", e);
+            }
         }
 
         public void conectar()
         {
-            MessageBox.Show("Conexion a la Base de Datos","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            try
+            {
+                conn.Open();
+                MessageBox.Show("Conexion a la Base de Datos","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         public void desconectar()
         {
-            MessageBox.Show("Desconexion de la Base de Datos","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            try
+            {
+                conn.Close();
+                MessageBox.Show("Desconexion de la Base de Datos","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }    
+
         }
     }
 }
